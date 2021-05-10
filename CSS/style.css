@@ -1,0 +1,193 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	}
+
+body{
+	
+	min-height: 100vh;
+	font-size: 13px;
+	background: hsl(210, 46%, 95%);
+	font-family: 'Barlow Semi Condensed', sans-serif;
+
+}
+
+.container{
+	margin: 6em auto;
+	width: 90vw;
+	
+}
+
+
+.item-a{
+	grid-area: profile;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+}
+
+.item-b{
+	grid-area: name;
+	align-self: end;
+	font-size: 1.2em;
+	margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.item-c{
+	grid-area: title;
+	align-self: start;
+	font-size: 1em;
+	font-weight: 500;
+	margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.purple-border{
+	border: 2px solid hsl(263, 55%, 67%);
+}
+
+.card-top{
+	display: grid;
+	column-gap: 1em;
+	
+	grid: [row1-start] "profile name" 15px [row1-end]
+		  [row2-start] "profile title" 15px [row2-end] 
+		  / 30px 168px;
+}
+
+.card{
+	padding:0 2em 2em;
+	margin-bottom: 2em;
+	border-radius: 0.5rem;
+}
+
+.card-1{
+	background-color: hsl(263, 55%, 52%);
+	}
+
+.quotation {
+	background-image:url(../images/bg-pattern-quotation.svg);
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+
+.card-content{
+	padding-top: 1.5em;
+}
+
+.card-2{
+	background: hsl(217, 19%, 35%);
+}
+
+.card-3{
+	background: hsl(0, 0%, 100%);
+}
+
+.card-4{
+	background: hsl(219, 29%, 14%);
+}
+
+.card-5{
+	background: hsl(0, 0%, 100%);
+}
+
+h1{
+	color: hsl(0, 0%, 100%);
+	font-weight: 600;
+} 
+
+p {
+	color: hsl(0, 0%, 100%, 0.7);
+} 
+
+h3 {
+	color: hsl(0, 0%, 100%);
+	font-weight: 600;
+} 
+
+h4 {
+	color: hsl(0, 0%, 100%, .5);
+	font-weight: 500;
+} 
+
+.card-3 h1,
+.card-5 h1 {
+	color: hsl(217, 19%, 35%);
+} 
+
+.card-3 p,
+.card-5 p {
+	color: hsl(217, 19%, 35%, .7);
+} 
+
+.card-3 h3,
+.card-5 h3 {
+	color: hsl(217, 19%, 35%);
+} 
+
+.card-3 h4,
+.card-5 h4 {
+	color: hsl(217, 19%, 35%, .5);
+} 
+
+
+
+@media (min-width: 1000px) {
+	.card-1{
+		grid-area: card-1;
+	}
+
+	.card-2{
+		grid-area: card-2;
+	}
+
+	.card-3{
+		grid-area: card-3;
+	}
+
+	.card-4{
+		grid-area: card-4;
+	}
+
+	.card-5{
+		grid-area: card-5;
+	}
+
+	.container{
+		display: grid;
+		column-gap: 2em;
+		grid: [row1-start] "card-1 card-1 card-2 card-5" auto [row1-end]
+		  	  [row2-start] "card-3 card-4 card-4 card-5" auto [row2-end] 
+		      / 1fr 1fr 1fr 1fr; 
+	}
+
+	.item-a{
+	    width: 56px;
+	    height: 56px;
+    }
+
+    .item-b{
+	    font-size: 1.4em;
+    }
+
+    .item-c{
+	font-size: 1.2em;
+    }
+ 
+	.card-top{
+	    display: grid;
+	    column-gap: 1em;
+	
+	grid: [row1-start] "profile name" 28px [row1-end]
+		  [row2-start] "profile title" 28px [row2-end] 
+		  / 56px 168px;
+			}
+
+	p{
+		font-size:1.4em
+	}
+
+}
+
